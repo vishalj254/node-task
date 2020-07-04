@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tapas Yoga Studio</title>
+  </head>
+  <link
+    href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      background-image: url("/images/logo.png");
+      font-family: "Baloo Bhai", cursive;
+      color: white;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .btn {
+      font-family: "Baloo Bhai", cursive;
+      margin: 0px 9px;
+      background-color: black;
+      color: white;
+      padding: 4px 14px;
+      border: 2px solid grey;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: rgb(104, 153, 58);
+      color: brown;
+    }
+
+    .container {
+      border: 4px solid black;
+      margin: 106px 80px;
+      padding: 75px;
+      width: 35%;
+      border-radius: 28px;
+    }
+
+    .form-group input {
+      font-family: "Baloo Bhai", cursive;
+      text-align: center;
+      display: block;
+      width: 508px;
+      padding: 1px;
+      border: 2px solid black;
+      margin: 11px auto;
+      font-size: 25px;
+      border-radius: 8px;
+    }
+
+    .container h1 {
+      text-align: center;
+      color: rgb(236, 47, 13);
+    }
+
+    .container button {
+      display: block;
+      width: 74%;
+      margin: 20px auto;
+    }
+  </style>
+
+  <body style="background-image: url('/images/logo.png');">
+    <div class="container">
+      <h1>Register</h1>
+      <form action="/api/addnewrecord" method="POST">
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            name="age"
+            placeholder="Enter your Age"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            name="contactno"
+            placeholder="Enter your contact Number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="email"
+            placeholder="Enter your Email ID"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your Password"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <center>
+        <a><%= message %></a>
+      </center>
+      <br />
+      <a href="/">Already have an account? Log in</a>
+    </div>
+  </body>
+</html>
